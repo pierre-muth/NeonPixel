@@ -1,0 +1,22 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# neonpixel
+#
+DEF neonpixel N 0 40 Y Y 1 F N
+F0 "N" 0 -200 50 H V C CNN
+F1 "neonpixel" 0 200 50 H I C CNN
+F2 "neonpixelmatrix:neonpixel" 0 -300 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 0 0 250 0 1 0 N
+X Vcc 1 -400 100 200 R 50 50 1 1 B
+X Cin 2 -400 0 200 R 50 50 1 1 B
+X Din 3 -400 -100 200 R 50 50 1 1 B
+X GND 4 450 -100 200 L 50 50 1 1 B
+X Dout 5 450 0 200 L 50 50 1 1 B
+X Cout 6 450 100 200 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+#End Library

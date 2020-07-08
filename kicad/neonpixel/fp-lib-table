@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name neonpixel)(type KiCad)(uri ${KIPRJMOD}/neonpixel.pretty)(options "")(descr ""))
+)
