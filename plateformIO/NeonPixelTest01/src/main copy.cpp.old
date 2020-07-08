@@ -1,0 +1,217 @@
+#include <Arduino.h>
+#include <WiFi.h>
+#include "time.h"
+#include "Adafruit_GFX.h"
+#include "NeonPixelMatrix.h"
+#include <Muth01_4.h>
+
+// constants
+const char* ntpServer = "pool.ntp.org";
+const char* ssid = "BoiteVivante";
+const char* password = "82F7625EEC6894868EA329F8E1";
+
+// global vars
+NeonPixelMatrix neonPixelMatrix = NeonPixelMatrix(100, 24);
+uint8_t time_digits[] = {0,0,0,0,0,0};
+uint8_t time_digits_old[] = {0,0,0,0,0,0};
+struct tm timeinfo;
+
+unsigned char hour_unit_old = 0x30;
+unsigned char hour_unit = 0x30;
+unsigned char hour_tenth_old = 0x30;
+unsigned char hour_tenth = 0x30;
+unsigned char minute_unit_old = 0x30;
+unsigned char minute_unit = 0x30;
+unsigned char minute_tenth_old = 0x30;
+unsigned char minute_tenth = 0x30;
+unsigned char second_unit_old = 0x30;
+unsigned char second_unit = 0x30;
+unsigned char second_tenth_old = 0x30;
+unsigned char second_tenth = 0x30;
+
+void WiFiEvent(WiFiEvent_t event, WiFiEventInfo_t info) {
+    switch (event) {
+
+        case SYSTEM_EVENT_STA_START:
+            WiFi.setHostname("NeonPixels");
+            break;
+        case SYSTEM_EVENT_STA_CONNECTED:
+            Serial.println("STA connected");
+            break;
+        case SYSTEM_EVENT_STA_GOT_IP:
+            Serial.println("STA got IP");
+            Serial.print("STA SSID: ");
+            Serial.println(WiFi.SSID());
+            Serial.print("STA IPv4: ");
+            Serial.println(WiFi.localIP());
+            Serial.print("MAC address: ");
+            Serial.println(WiFi.macAddress());
+            //init and get the time
+            configTime(0, 0, ntpServer);
+            break;
+        case SYSTEM_EVENT_STA_DISCONNECTED:
+            Serial.print("STA Disconnected. ");
+            Serial.println(info.disconnected.reason);
+            WiFi.persistent(false);
+            WiFi.disconnect(true);
+            delay(10000);
+            ESP.restart();
+            break;
+        default:
+            break;
+    }
+}
+void connectWiFi() {
+    WiFi.persistent(false);
+    WiFi.disconnect(true);
+    WiFi.mode(WIFI_OFF);
+    WiFi.mode(WIFI_STA);
+
+    WiFi.onEvent(WiFiEvent);
+    WiFi.begin(ssid, password);
+    Serial.println(F("WiFi connexion ongoing"));
+}
+
+// get time with NTP
+void getTime() {
+
+    // get time
+    if (!getLocalTime(&timeinfo)) {
+        Serial.println("Failed to obtain time");
+        return;
+    }
+
+    Serial.print(&timeinfo, "%A, %B %d %Y %H:%M:%S");
+    Serial.print(", RSSI: ");
+    Serial.println(WiFi.RSSI());
+
+    // generate time numbers
+    for (int i=0; i<6; i++){
+      time_digits_old[i] = time_digits[i];  
+    }
+
+    time_digits[5] = timeinfo.tm_sec % 10;
+    time_digits[4] = timeinfo.tm_sec / 10;
+    time_digits[3] = timeinfo.tm_min % 10;
+    time_digits[2] = timeinfo.tm_min / 10;
+    time_digits[1] = timeinfo.tm_hour % 10;
+    time_digits[0] = timeinfo.tm_hour / 10;
+
+}
+
+void setup() {
+  Serial.begin(115200);
+  while (!Serial) { ; }
+  delay(10000); 
+  connectWiFi();
+
+  neonPixelMatrix.begin();
+  neonPixelMatrix.setDisplayPixelSize(48,8);
+  neonPixelMatrix.setViewOrigin(0,8);
+  neonPixelMatrix.setFont(&Muth014pt7b);
+}
+
+void loop() {
+  second_unit++;
+  if (second_unit > 0x39){
+    second_unit = 0x30;
+    second_tenth++;
+    if (second_tenth > 0x35) {
+      second_tenth = 0x30;
+      minute_unit++;
+      if (minute_unit > 0x39) {
+        minute_unit = 0x30;
+        minute_tenth++;
+        if (minute_tenth > 0x35) {
+          minute_tenth = 0x30;
+          hour_unit++;
+          if (hour_unit > 0x39) {
+            hour_unit = 0x30;
+            hour_tenth++;
+            if (hour_tenth > 0x32) {
+              hour_tenth = 0x30;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  uint8_t color = 0x10;
+
+  for (int i=0; i<10; i++) {
+    neonPixelMatrix.clear();
+    
+    if (hour_tenth != hour_tenth_old) {
+      neonPixelMatrix.drawChar(0, 15-i, hour_tenth_old , color, 0x00, 1);
+      neonPixelMatrix.drawChar(0, 24-i, hour_tenth , color, 0x00, 1);
+    } else {
+      neonPixelMatrix.drawChar(0, 15, hour_tenth , color, 0x00, 1);
+    }
+    if (hour_unit != hour_unit_old) {
+      neonPixelMatrix.drawChar(8, 15-i, hour_unit_old , color, 0x00, 1);
+      neonPixelMatrix.drawChar(8, 24-i, hour_unit , color, 0x00, 1);
+    } else {
+      neonPixelMatrix.drawChar(8, 15, hour_unit , color, 0x00, 1);
+    }
+
+    if (minute_tenth != minute_tenth_old){
+      neonPixelMatrix.drawChar(17, 15-i, minute_tenth_old , color, 0x00, 1);
+      neonPixelMatrix.drawChar(17, 24-i, minute_tenth , color, 0x00, 1);
+    } else {
+      neonPixelMatrix.drawChar(17, 15, minute_tenth , color, 0x00, 1);
+    }
+    if (minute_unit != minute_unit_old) {
+      neonPixelMatrix.drawChar(25, 15-i, minute_unit_old , color, 0x00, 1);
+      neonPixelMatrix.drawChar(25, 24-i, minute_unit , color, 0x00, 1);
+    } else {
+      neonPixelMatrix.drawChar(25, 15, minute_unit , color, 0x00, 1);
+    }
+
+    if (second_tenth != second_tenth_old){
+      neonPixelMatrix.drawChar(34, 15-i, second_tenth_old , color, 0x00, 1);
+      neonPixelMatrix.drawChar(34, 24-i, second_tenth , color, 0x00, 1);
+    } else {
+      neonPixelMatrix.drawChar(34, 15, second_tenth , color, 0x00, 1);
+    }
+    if (second_unit != second_unit_old) {
+      neonPixelMatrix.drawChar(42, 15-i, second_unit_old , color, 0x00, 1);
+      neonPixelMatrix.drawChar(42, 24-i, second_unit , color, 0x00, 1);
+    } else {
+      neonPixelMatrix.drawChar(42, 15, second_unit , color, 0x00, 1);
+    }
+
+    neonPixelMatrix.drawPixel(15, 10, color);
+    neonPixelMatrix.drawPixel(15, 13, color);
+    neonPixelMatrix.drawPixel(32, 10, color);
+    neonPixelMatrix.drawPixel(32, 13, color);
+
+
+    neonPixelMatrix.display();
+    delay(30);
+  }
+
+  second_unit_old = second_unit;
+  second_tenth_old = second_tenth;
+  minute_unit_old = minute_unit;
+  minute_tenth_old = minute_tenth;
+  hour_unit_old = hour_unit;
+  hour_tenth_old = hour_tenth;
+  
+  if (second_unit==0x34) {
+    neonPixelMatrix.setCursor(60,15);
+    neonPixelMatrix.setTextColor(color);
+    neonPixelMatrix.print("Mardi 06");
+    for (int i=0; i<100; i++) {
+      neonPixelMatrix.setViewOrigin(i, 8);
+      neonPixelMatrix.display();
+      delay(30);
+    }
+    neonPixelMatrix.setViewOrigin(0, 8);
+    neonPixelMatrix.display();
+  }
+  
+  delay(800);
+
+  getTime();
+}
