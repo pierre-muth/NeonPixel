@@ -7,8 +7,8 @@
 
 // constants
 const char* ntpServer = "pool.ntp.org";
-const char* ssid = "BoiteVivante";
-const char* password = "82F7625EEC6894868EA329F8E1";
+const char* ssid = "xxx";
+const char* password = "xxx";
 const uint16_t char_place[] = {0, 8, 17, 25, 34, 42};
 
 // global vars
