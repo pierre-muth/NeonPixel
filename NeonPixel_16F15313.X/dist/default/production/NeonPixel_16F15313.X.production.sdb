@@ -1,0 +1,591 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F15313 ]
+[d frameptr 6 ]
+"88 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/tmr2.c
+[e E5865 . `uc
+TMR2_ROP_STARTS_TMRON 0
+TMR2_ROP_STARTS_TMRON_ERSHIGH 1
+TMR2_ROP_STARTS_TMRON_ERSLOW 2
+TMR2_ROP_RESETS_ERSBOTHEDGE 3
+TMR2_ROP_RESETS_ERSRISINGEDGE 4
+TMR2_ROP_RESETS_ERSFALLINGEDGE 5
+TMR2_ROP_RESETS_ERSLOW 6
+TMR2_ROP_RESETS_ERSHIGH 7
+TMR2_OS_STARTS_TMRON 8
+TMR2_OS_STARTS_ERSRISINGEDGE 9
+TMR2_OS_STARTS_ERSFALLINGEDGE 10
+TMR2_OS_STARTS_ERSBOTHEDGE 11
+TMR2_OS_STARTS_ERSFIRSTRISINGEDGE 12
+TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE 13
+TMR2_OS_STARTS_ERSRISINGEDGEDETECT 14
+TMR2_OS_STARTS_ERSFALLINGEDGEDETECT 15
+TMR2_OS_STARTS_TMRON_ERSHIGH 22
+TMR2_OS_STARTS_TMRON_ERSLOW 23
+TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT 17
+TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
+TMR2_MS_STARTS_TMRON_ERSBOTHEDGE 19
+]
+"94
+[e E5888 . `uc
+TMR2_T2INPPS 0
+TMR2_CCP1_OUT 1
+TMR2_CCP2_OUT 2
+TMR2_PWM3_OUT 3
+TMR2_PWM4_OUT 4
+TMR2_PWM5_OUT 5
+TMR2_PWM6_OUT 6
+TMR2_C1_OUT_SYNC 7
+TMR2_C2_OUT_SYNC 8
+TMR2_ZCD_OUTPUT 9
+TMR2_CLC1_OUT 10
+TMR2_CLC2_OUT 11
+TMR2_CLC3_OUT 12
+TMR2_CLC4_OUT 13
+]
+"79 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/spi1.c
+[e E353 . `uc
+SPI1_DEFAULT 0
+]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"50 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\main.c
+[v _spi1InterruptHandler spi1InterruptHandler `(v  1 e 1 0 ]
+"57
+[v _tmr0InterruptHandler tmr0InterruptHandler `(v  1 e 1 0 ]
+"66
+[v _main main `(v  1 e 1 0 ]
+"58 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/clc1.c
+[v _CLC1_Initialize CLC1_Initialize `(v  1 e 1 0 ]
+"58 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/clc2.c
+[v _CLC2_Initialize CLC2_Initialize `(v  1 e 1 0 ]
+"52 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"50 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"64
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"80
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"58 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/nco1.c
+[v _NCO1_Initialize NCO1_Initialize `(v  1 e 1 0 ]
+"55 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"58 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/pwm3.c
+[v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
+"72
+[v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
+"62 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+"99
+[v _SPI1_ExchangeByte SPI1_ExchangeByte `(uc  1 e 1 0 ]
+"148
+[v _SPI1_Isr SPI1_Isr `(v  1 e 1 0 ]
+"158
+[v _SPI1_SetInterruptHandler SPI1_SetInterruptHandler `(v  1 e 1 0 ]
+"61 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"121
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+"134
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+"138
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"62 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"100
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+"111
+[v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
+"122
+[v _TMR2_Counter8BitGet TMR2_Counter8BitGet `(uc  1 e 1 0 ]
+"136
+[v _TMR2_Counter8BitSet TMR2_Counter8BitSet `(v  1 e 1 0 ]
+"147
+[v _TMR2_Period8BitSet TMR2_Period8BitSet `(v  1 e 1 0 ]
+"65 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X/mcc_generated_files/spi1.h
+[v _MSSP1_InterruptHandler MSSP1_InterruptHandler `*.37(v  1 e 2 0 ]
+[s S711 . 1 `uc 1 INTEDG 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"426 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f15313.h
+[u S716 . 1 `S711 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES716  1 e 1 @11 ]
+"496
+[v _TRISA TRISA `VEuc  1 e 1 @18 ]
+[s S471 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"511
+[u S478 . 1 `S471 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES478  1 e 1 @18 ]
+"541
+[v _LATA LATA `VEuc  1 e 1 @24 ]
+"1767
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @396 ]
+"1787
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @397 ]
+"1977
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
+"2341
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
+[s S488 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"2371
+[s S494 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[s S499 . 1 `uc 1 SSPM01 1 0 :1:0 
+`uc 1 SSPM11 1 0 :1:1 
+`uc 1 SSPM21 1 0 :1:2 
+`uc 1 SSPM31 1 0 :1:3 
+`uc 1 CKP1 1 0 :1:4 
+`uc 1 SSPEN1 1 0 :1:5 
+`uc 1 SSPOV1 1 0 :1:6 
+`uc 1 WCOL1 1 0 :1:7 
+]
+[u S508 . 1 `S488 1 . 1 0 `S494 1 . 1 0 `S499 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES508  1 e 1 @400 ]
+"2461
+[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
+"3607
+[v _T2TMR T2TMR `VEuc  1 e 1 @652 ]
+"3612
+[v _TMR2 TMR2 `VEuc  1 e 1 @652 ]
+"3661
+[v _T2PR T2PR `VEuc  1 e 1 @653 ]
+"3666
+[v _PR2 PR2 `VEuc  1 e 1 @653 ]
+"3715
+[v _T2CON T2CON `VEuc  1 e 1 @654 ]
+[s S164 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 CKPS 1 0 :3:4 
+`uc 1 ON 1 0 :1:7 
+]
+"3751
+[s S168 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+`uc 1 CKPS2 1 0 :1:6 
+]
+[s S176 . 1 `uc 1 T2OUTPS 1 0 :4:0 
+`uc 1 T2CKPS 1 0 :3:4 
+`uc 1 T2ON 1 0 :1:7 
+]
+[s S180 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
+`uc 1 T2OUTPS1 1 0 :1:1 
+`uc 1 T2OUTPS2 1 0 :1:2 
+`uc 1 T2OUTPS3 1 0 :1:3 
+`uc 1 T2CKPS0 1 0 :1:4 
+`uc 1 T2CKPS1 1 0 :1:5 
+`uc 1 T2CKPS2 1 0 :1:6 
+`uc 1 TMR2ON 1 0 :1:7 
+]
+[u S189 . 1 `S164 1 . 1 0 `S168 1 . 1 0 `S176 1 . 1 0 `S180 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES189  1 e 1 @654 ]
+"3861
+[v _T2HLT T2HLT `VEuc  1 e 1 @655 ]
+[s S65 . 1 `uc 1 MODE 1 0 :5:0 
+`uc 1 CKSYNC 1 0 :1:5 
+`uc 1 CKPOL 1 0 :1:6 
+`uc 1 PSYNC 1 0 :1:7 
+]
+"3894
+[s S70 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+`uc 1 MODE4 1 0 :1:4 
+]
+[s S76 . 1 `uc 1 T2MODE 1 0 :5:0 
+`uc 1 T2CKSYNC 1 0 :1:5 
+`uc 1 T2CKPOL 1 0 :1:6 
+`uc 1 T2PSYNC 1 0 :1:7 
+]
+[s S81 . 1 `uc 1 T2MODE0 1 0 :1:0 
+`uc 1 T2MODE1 1 0 :1:1 
+`uc 1 T2MODE2 1 0 :1:2 
+`uc 1 T2MODE3 1 0 :1:3 
+`uc 1 T2MODE4 1 0 :1:4 
+]
+[u S87 . 1 `S65 1 . 1 0 `S70 1 . 1 0 `S76 1 . 1 0 `S81 1 . 1 0 ]
+[v _T2HLTbits T2HLTbits `VES87  1 e 1 @655 ]
+"3989
+[v _T2CLKCON T2CLKCON `VEuc  1 e 1 @656 ]
+"4069
+[v _T2RST T2RST `VEuc  1 e 1 @657 ]
+[s S130 . 1 `uc 1 RSEL 1 0 :4:0 
+]
+"4094
+[s S132 . 1 `uc 1 RSEL0 1 0 :1:0 
+`uc 1 RSEL1 1 0 :1:1 
+`uc 1 RSEL2 1 0 :1:2 
+`uc 1 RSEL3 1 0 :1:3 
+]
+[s S137 . 1 `uc 1 T2RSEL 1 0 :4:0 
+]
+[s S139 . 1 `uc 1 T2RSEL0 1 0 :1:0 
+`uc 1 T2RSEL1 1 0 :1:1 
+`uc 1 T2RSEL2 1 0 :1:2 
+`uc 1 T2RSEL3 1 0 :1:3 
+]
+[u S144 . 1 `S130 1 . 1 0 `S132 1 . 1 0 `S137 1 . 1 0 `S139 1 . 1 0 ]
+[v _T2RSTbits T2RSTbits `VES144  1 e 1 @657 ]
+"4640
+[v _PWM3DCL PWM3DCL `VEuc  1 e 1 @788 ]
+"4706
+[v _PWM3DCH PWM3DCH `VEuc  1 e 1 @789 ]
+"4876
+[v _PWM3CON PWM3CON `VEuc  1 e 1 @790 ]
+"5838
+[v _NCO1ACCL NCO1ACCL `VEuc  1 e 1 @1420 ]
+"5908
+[v _NCO1ACCH NCO1ACCH `VEuc  1 e 1 @1421 ]
+"5978
+[v _NCO1ACCU NCO1ACCU `VEuc  1 e 1 @1422 ]
+"6033
+[v _NCO1INCL NCO1INCL `VEuc  1 e 1 @1423 ]
+"6103
+[v _NCO1INCH NCO1INCH `VEuc  1 e 1 @1424 ]
+"6173
+[v _NCO1INCU NCO1INCU `VEuc  1 e 1 @1425 ]
+"6219
+[v _NCO1CON NCO1CON `VEuc  1 e 1 @1426 ]
+[s S325 . 1 `uc 1 N1PFM 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 N1POL 1 0 :1:4 
+`uc 1 N1OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 N1EN 1 0 :1:7 
+]
+"6234
+[u S332 . 1 `S325 1 . 1 0 ]
+[v _NCO1CONbits NCO1CONbits `VES332  1 e 1 @1426 ]
+"6259
+[v _NCO1CLK NCO1CLK `VEuc  1 e 1 @1427 ]
+"6331
+[v _TMR0L TMR0L `VEuc  1 e 1 @1436 ]
+"6469
+[v _TMR0H TMR0H `VEuc  1 e 1 @1437 ]
+"6723
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @1438 ]
+[s S870 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T016BIT 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+"6743
+[s S876 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+`uc 1 T0OUTPS1 1 0 :1:1 
+`uc 1 T0OUTPS2 1 0 :1:2 
+`uc 1 T0OUTPS3 1 0 :1:3 
+]
+[u S881 . 1 `S870 1 . 1 0 `S876 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES881  1 e 1 @1438 ]
+"6788
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @1439 ]
+[s S694 . 1 `uc 1 INTF 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIF 1 0 :1:4 
+`uc 1 TMR0IF 1 0 :1:5 
+]
+"7649
+[u S699 . 1 `S694 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES699  1 e 1 @1804 ]
+[s S537 . 1 `uc 1 SSP1IF 1 0 :1:0 
+`uc 1 BCL1IF 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+]
+"7749
+[u S543 . 1 `S537 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES543  1 e 1 @1807 ]
+[s S33 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+]
+"7785
+[u S36 . 1 `S33 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES36  1 e 1 @1808 ]
+[s S681 . 1 `uc 1 INTE 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+"7926
+[u S686 . 1 `S681 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES686  1 e 1 @1814 ]
+[s S446 . 1 `uc 1 SSP1IE 1 0 :1:0 
+`uc 1 BCL1IE 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+]
+"8020
+[u S452 . 1 `S446 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES452  1 e 1 @1817 ]
+"8184
+[v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
+"8229
+[v _PMD1 PMD1 `VEuc  1 e 1 @1943 ]
+"8277
+[v _PMD2 PMD2 `VEuc  1 e 1 @1944 ]
+"8316
+[v _PMD3 PMD3 `VEuc  1 e 1 @1945 ]
+"8366
+[v _PMD4 PMD4 `VEuc  1 e 1 @1946 ]
+"8400
+[v _PMD5 PMD5 `VEuc  1 e 1 @1947 ]
+"9462
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
+"9602
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
+"9636
+[v _OSCSTAT OSCSTAT `VEuc  1 e 1 @2192 ]
+"9688
+[v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
+"9734
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
+"9792
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"10574
+[v _CLC1CON CLC1CON `VEuc  1 e 1 @7696 ]
+[s S375 . 1 `uc 1 LC1MODE 1 0 :3:0 
+`uc 1 LC1INTN 1 0 :1:3 
+`uc 1 LC1INTP 1 0 :1:4 
+`uc 1 LC1OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 LC1EN 1 0 :1:7 
+]
+"10607
+[s S382 . 1 `uc 1 LC1MODE0 1 0 :1:0 
+`uc 1 LC1MODE1 1 0 :1:1 
+`uc 1 LC1MODE2 1 0 :1:2 
+]
+[s S386 . 1 `uc 1 MODE 1 0 :3:0 
+`uc 1 INTN 1 0 :1:3 
+`uc 1 INTP 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+[s S393 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+]
+[u S397 . 1 `S375 1 . 1 0 `S382 1 . 1 0 `S386 1 . 1 0 `S393 1 . 1 0 ]
+[v _CLC1CONbits CLC1CONbits `VES397  1 e 1 @7696 ]
+"10692
+[v _CLC1POL CLC1POL `VEuc  1 e 1 @7697 ]
+"10770
+[v _CLC1SEL0 CLC1SEL0 `VEuc  1 e 1 @7698 ]
+"10874
+[v _CLC1SEL1 CLC1SEL1 `VEuc  1 e 1 @7699 ]
+"10978
+[v _CLC1SEL2 CLC1SEL2 `VEuc  1 e 1 @7700 ]
+"11082
+[v _CLC1SEL3 CLC1SEL3 `VEuc  1 e 1 @7701 ]
+"11186
+[v _CLC1GLS0 CLC1GLS0 `VEuc  1 e 1 @7702 ]
+"11298
+[v _CLC1GLS1 CLC1GLS1 `VEuc  1 e 1 @7703 ]
+"11410
+[v _CLC1GLS2 CLC1GLS2 `VEuc  1 e 1 @7704 ]
+"11522
+[v _CLC1GLS3 CLC1GLS3 `VEuc  1 e 1 @7705 ]
+"11634
+[v _CLC2CON CLC2CON `VEuc  1 e 1 @7706 ]
+[s S622 . 1 `uc 1 LC2MODE 1 0 :3:0 
+`uc 1 LC2INTN 1 0 :1:3 
+`uc 1 LC2INTP 1 0 :1:4 
+`uc 1 LC2OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 LC2EN 1 0 :1:7 
+]
+"11667
+[s S629 . 1 `uc 1 LC2MODE0 1 0 :1:0 
+`uc 1 LC2MODE1 1 0 :1:1 
+`uc 1 LC2MODE2 1 0 :1:2 
+]
+[u S644 . 1 `S622 1 . 1 0 `S629 1 . 1 0 `S386 1 . 1 0 `S393 1 . 1 0 ]
+[v _CLC2CONbits CLC2CONbits `VES644  1 e 1 @7706 ]
+"11752
+[v _CLC2POL CLC2POL `VEuc  1 e 1 @7707 ]
+"11830
+[v _CLC2SEL0 CLC2SEL0 `VEuc  1 e 1 @7708 ]
+"11934
+[v _CLC2SEL1 CLC2SEL1 `VEuc  1 e 1 @7709 ]
+"12038
+[v _CLC2SEL2 CLC2SEL2 `VEuc  1 e 1 @7710 ]
+"12142
+[v _CLC2SEL3 CLC2SEL3 `VEuc  1 e 1 @7711 ]
+"12246
+[v _CLC2GLS0 CLC2GLS0 `VEuc  1 e 1 @7712 ]
+"12358
+[v _CLC2GLS1 CLC2GLS1 `VEuc  1 e 1 @7713 ]
+"12470
+[v _CLC2GLS2 CLC2GLS2 `VEuc  1 e 1 @7714 ]
+"12582
+[v _CLC2GLS3 CLC2GLS3 `VEuc  1 e 1 @7715 ]
+"15414
+[v _CLCIN2PPS CLCIN2PPS `VEuc  1 e 1 @7869 ]
+"15588
+[v _SSP1CLKPPS SSP1CLKPPS `VEuc  1 e 1 @7877 ]
+"15646
+[v _SSP1DATPPS SSP1DATPPS `VEuc  1 e 1 @7878 ]
+"15878
+[v _RA0PPS RA0PPS `VEuc  1 e 1 @7952 ]
+"15922
+[v _RA1PPS RA1PPS `VEuc  1 e 1 @7953 ]
+"15966
+[v _RA2PPS RA2PPS `VEuc  1 e 1 @7954 ]
+"16098
+[v _RA5PPS RA5PPS `VEuc  1 e 1 @7957 ]
+"16142
+[v _ANSELA ANSELA `VEuc  1 e 1 @7992 ]
+"16187
+[v _WPUA WPUA `VEuc  1 e 1 @7993 ]
+"16237
+[v _ODCONA ODCONA `VEuc  1 e 1 @7994 ]
+"16282
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @7995 ]
+"16327
+[v _INLVLA INLVLA `VEuc  1 e 1 @7996 ]
+"46 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\main.c
+[v _idleStart idleStart `uc  1 e 1 0 ]
+"47
+[v _counter counter `us  1 e 2 0 ]
+"48
+[v _brightness brightness `uc  1 e 1 0 ]
+[s S434 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
+"58 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/spi1.c
+[v _spi1_configuration spi1_configuration `DC[1]S434  1 s 4 spi1_configuration ]
+"59 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/tmr0.c
+[v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
+"66 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"95
+} 0
+"50 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"62
+} 0
+"62 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"86
+} 0
+"61 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"85
+} 0
+"134
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+"136
+} 0
+"62 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+{
+"77
+} 0
+"158
+[v _SPI1_SetInterruptHandler SPI1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v SPI1_SetInterruptHandler@handler handler `*.37(v  1 p 2 2 ]
+"161
+} 0
+"58 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/pwm3.c
+[v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"80 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/mcc.c
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"94
+} 0
+"55 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"105
+} 0
+"64 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"78
+} 0
+"58 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/nco1.c
+[v _NCO1_Initialize NCO1_Initialize `(v  1 e 1 0 ]
+{
+"81
+} 0
+"58 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/clc2.c
+[v _CLC2_Initialize CLC2_Initialize `(v  1 e 1 0 ]
+{
+"83
+} 0
+"58 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/clc1.c
+[v _CLC1_Initialize CLC1_Initialize `(v  1 e 1 0 ]
+{
+"83
+} 0
+"72 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/pwm3.c
+[v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
+{
+[v PWM3_LoadDutyValue@dutyValue dutyValue `us  1 p 2 2 ]
+"79
+} 0
+"52 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"74
+} 0
+"121 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/tmr0.c
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+{
+"131
+} 0
+"138
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"141
+} 0
+"57 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\main.c
+[v _tmr0InterruptHandler tmr0InterruptHandler `(v  1 e 1 0 ]
+{
+"64
+} 0
+"50
+[v _spi1InterruptHandler spi1InterruptHandler `(v  1 e 1 0 ]
+{
+"55
+} 0
+"148 C:\Users\pfreyerm\MPLABXProjects\NeonPixel_16F15313.X\mcc_generated_files/spi1.c
+[v _SPI1_Isr SPI1_Isr `(v  1 e 1 0 ]
+{
+"156
+} 0
