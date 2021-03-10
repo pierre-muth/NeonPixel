@@ -5,8 +5,8 @@
 #define DATAPIN    26
 #define CLOCKPIN   27
 
-const char* ssid = "BoiteVivante";
-const char* password = "82F7625EEC6894868EA329F8E1";
+const char* ssid = "xxx";
+const char* password = "xxx";
 
 static const int spiClk = 400000; 
 
